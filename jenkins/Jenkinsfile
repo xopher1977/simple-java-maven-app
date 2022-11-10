@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                C:\Program Files\Git\bin\sh './jenkins/scripts/deliver.sh'
+                sh './jenkins/scripts/deliver.sh'
             }
         }
     }
