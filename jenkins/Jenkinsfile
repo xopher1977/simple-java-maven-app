@@ -1,21 +1,22 @@
 pipeline {
  agent any
-   environment {
+  /* environment {
         DISABLE_AUTH = 'true'
         DB_ENGINE    = 'sqlite'
-    }
+    }*/
     stages {
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
             }
         }
-        stage('Test Environment variables') {
+      //  stage('Test Environment variables') {
+      stage('Print Date/Time'){
             steps {
              sh 'date'
-             echo "Database engine is ${DB_ENGINE}"
+       /*      echo "Database engine is ${DB_ENGINE}"
                 echo "DISABLE_AUTH is ${DISABLE_AUTH}"
-                sh 'printenv'
+                sh 'printenv'*/
             }
         }
         stage('Test') {
