@@ -6,6 +6,11 @@ pipeline {
                 sh 'mvn -B -DskipTests clean package'
             }
         }
+        stage('Display Time/Date') {
+            steps {
+                Date()
+            }
+        }
         stage('Test') {
             steps {
                 sh 'mvn test'
