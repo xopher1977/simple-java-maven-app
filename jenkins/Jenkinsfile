@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Display Time/Date') {
             steps {
-                Date()
+                echo $(date)
             }
         }
         stage('Test') {
