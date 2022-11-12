@@ -1,11 +1,6 @@
 pipeline {
  agent any
     stages {
-     stage('Display Time'){
-         steps {
-               echo date
-          }
-     }
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
